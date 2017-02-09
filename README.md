@@ -4,7 +4,7 @@
 Joses Paras <br />
 Lucas Anderson <br />
 Tanpreet Dhaliwal <br />
-Isaac Fieldings
+Isaac Fielding
 
 ## Rules ##
 <p>The specific rules for this project are:</p>
