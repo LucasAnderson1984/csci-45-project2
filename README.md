@@ -1,11 +1,10 @@
 # csci-45-project2
- #
 
 ## Team ##
 Joses Paras <br />
 Lucas Anderson <br />
 Tanpreet Dhaliwal <br />
-Isaac Fieldings
+Isaac Fielding
 
 ## Rules ##
 <p>The specific rules for this project are:</p>
@@ -18,3 +17,21 @@ Isaac Fieldings
 - - - -
 # Project Proposal #
 Create a painting with hidden paint integrated into it that can only become visible with black lights.  The black lights will be connected to a relay, which gets activated with a photoresistor and an optional motion sensor light switch (for sustained viewing).
+
+## Sensors ##
+[Relay](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-4-relay-module-sensor-kit-v2-0-for-b-plus.html) <br />
+[Photoresistor](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-20-photoresistor-module-sensor-kit-v2-0-for-b-plus.html) <br />
+
+### Relay ###
+### Photoresistor ###
+
+## Responsibilities ##
+
+
+- - - -
+# Compile and Run Code #
+Run code: <br />
+```
+make
+sudo ./project.o
+```
