@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <errno.h>
 #include <wiringPi.h>
-#include <pcf8591.h>
 #include <math.h>
-#define RelayPin 0
-#define PCF 120
-#define DOpin 0
+#define RelayPin1 17
+#define RelayPin2 27
+#define DOpin 22
 
 int main(void) {
 
@@ -14,17 +13,18 @@ int main(void) {
     return 1;
   }
 
-  pinMode(RelayPin, OUTPUT);
-  pcf8591Setup(PCF, 0x48);
+  pinMode(RelayPin1, OUTPUT);
+  pinMode(RelayPin2, OUTPUT);
+  digitalWrite(RelayPin2, HIGH);
 
   while(1) {
-    analogVal = analogRead(PCF + 0);
-    printf("Value: %d\n", analogVal);
-    delay (200);
-    digitalWrite(RelayPin, LOW);
-    delay(1000);
-    digitalWrite(RelayPin, HIGH);
-    delay(1000);
+    if(digitalRead(DOpin)) {
+      digitalWrite(RelayPin1, HIGH);
+      delay (2000);
+    }
+    else {
+      delay (1000);
+    }
   }
 
   return 0;
