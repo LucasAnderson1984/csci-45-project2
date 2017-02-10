@@ -36,7 +36,6 @@ int main(void) {
       digitalWrite(RelayPin1, LOW);
       delay (500);
     }
-    digitalWrite(TouchPin, LOW);
   }
 
   return 0;
