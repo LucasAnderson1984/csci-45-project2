@@ -12,18 +12,20 @@ int main(void) {
     return 1;
   }
 
+  pinMode(DOpin, INPUT);
   pinMode(RelayPin1, OUTPUT);
   pinMode(RelayPin2, OUTPUT);
+  digitalWrite(RelayPin1, LOW);
   digitalWrite(RelayPin2, HIGH);
 
   while(1) {
     if(digitalRead(DOpin)) {
       digitalWrite(RelayPin1, HIGH);
-      delay (5000);
+      delay (10000);
     }
     else {
       digitalWrite(RelayPin1, LOW);
-      delay (1000);
+      delay (500);
     }
   }
 
