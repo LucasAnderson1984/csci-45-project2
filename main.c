@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <errno.h>
 #include <wiringPi.h>
-#include <math.h>
 #define RelayPin1 17
 #define RelayPin2 27
 #define DOpin 22
