@@ -13,6 +13,8 @@ int main(void) {
     return 1;
   }
 
+  int temp = 0;
+
   pinMode(DOpin, INPUT);
   pinMode(TouchPin, INPUT);
   pinMode(RelayPin1, OUTPUT);
@@ -21,15 +23,19 @@ int main(void) {
   digitalWrite(RelayPin2, HIGH);
 
   while(1) {
-    if(digitalRead(DOpin) || digitalRead(TouchPin)) {
+    if(digitalRead(DOpin)) {
       digitalWrite(RelayPin1, HIGH);
       delay (10000);
+    }
+    else if (digitalRead(TouchPin) != temp) {
+      digitalWrite(RelayPin1, HIGH);
+      temp = digitalRead(TouchPin);
+      delay(10000);
     }
     else {
       digitalWrite(RelayPin1, LOW);
       delay (500);
     }
-
     digitalWrite(TouchPin, LOW);
   }
 
