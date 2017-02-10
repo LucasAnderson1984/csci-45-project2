@@ -22,17 +22,20 @@ Create a painting with hidden paint integrated into it that can only become visi
 [Relay](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-4-relay-module-sensor-kit-v2-0-for-b-plus.html) <br />
 [Photoresistor](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-20-photoresistor-module-sensor-kit-v2-0-for-b-plus.html) <br />
 
+### Photoresistor ###
+GPIO 22 - DOpin
 ### Relay ###
 GPIO 17 - RelayPin1 <br />
 GPIO 27 - RelayPin2
-### Photoresistor ###
-GPIO 22 - DOpin
+### Touch Switch ###
+GPIO 18 - TouchPin
 
 ## Responsibilities ##
-Joses Paras <br />
-Lucas Anderson <br />
-Tanpreet Dhaliwal <br />
-Isaac Fielding
+Responsible for Programming - Joses Paras <br />
+Got the frame for the portrait, the materials needed for wiring, and helping Program - Lucas Anderson <br />
+Writing the Project paper - Tanpreet Dhaliwal <br />
+Responsible for the Painting - Isaac Fielding <br />
+Wiring and Soldering the thing together - All
 
 - - - -
 # Compile and Run Code #
