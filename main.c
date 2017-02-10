@@ -19,9 +19,10 @@ int main(void) {
   while(1) {
     if(digitalRead(DOpin)) {
       digitalWrite(RelayPin1, HIGH);
-      delay (2000);
+      delay (5000);
     }
     else {
+      digitalWrite(RelayPin1, LOW);
       delay (1000);
     }
   }
