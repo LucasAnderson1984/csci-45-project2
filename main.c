@@ -29,6 +29,7 @@ int main(void) {
     info = localtime( &rawtime );
 
     if((strftime (buffer, 80, "%I %p", info)) == "6 PM") {
+      digitalWrite(RelayPin1, LOW);
       while((strftime (buffer, 80, "%I %p", info)) != "6 AM") {
         delay(100);
       }
