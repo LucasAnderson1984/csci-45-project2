@@ -2,10 +2,9 @@
 #include <errno.h>
 #include <wiringPi.h>
 #include <time.h>
-#define DOpin 22
+#define DOpin 19
 #define RelayPin1 17
-#define RelayPin2 27
-#define TouchPin 18
+#define TouchPin 26
 
 int main(void) {
 
