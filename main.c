@@ -29,7 +29,7 @@ int main(void) {
     info = localtime( &rawtime );
 
     strftime (buffer, 10, "%I %p", info);
-    if(((buffer == nightcheck) {
+    if(buffer == nightcheck) {
       digitalWrite(RelayPin1, LOW);
       while(buffer != morningcheck) {
         time( &rawtime );
