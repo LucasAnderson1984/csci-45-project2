@@ -15,6 +15,9 @@ int main(void) {
   }
 
   int temp = 0;
+  time_t rawtime;
+  struct tm *info;
+  char buffer[80];
 
   pinMode(DOpin, INPUT);
   pinMode(TouchPin, INPUT);
@@ -22,6 +25,15 @@ int main(void) {
   digitalWrite(RelayPin1, LOW);
 
   while(1) {
+    time( &rawtime );
+    info = localtime( &rawtime );
+
+    if((strftime (buffer, 80, "%I %p", info)) == "6 PM") {
+      while((strftime (buffer, 80, "%I %p", info)) != "6 AM") {
+        delay(100);
+      }
+    }
+
     if(digitalRead(DOpin)) {
       digitalWrite(RelayPin1, HIGH);
       delay (10000);
