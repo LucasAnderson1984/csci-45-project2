@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <wiringPi.h>
+
 #include <time.h>
 #define DOpin 19
 #define RelayPin1 17
@@ -14,11 +15,13 @@ int main(void) {
   }
 
   int temp = 0;
+
   time_t rawtime;
   struct tm *info;
   char buffer[10];
   char nightcheck[4] = {8, ' ', 'P', 'M'};
   char morningcheck[4] = {6, ' ', 'A', 'M'};
+  
   pinMode(DOpin, INPUT);
   pinMode(TouchPin, INPUT);
   pinMode(RelayPin1, OUTPUT);
