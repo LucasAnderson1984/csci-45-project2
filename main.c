@@ -16,7 +16,7 @@ int main(void) {
   int temp = 0;
   time_t rawtime;
   struct tm *info;
-  char buffer[4];
+  char buffer[10];
   char nightcheck[4] = {6, ' ', 'P', 'M'};
   char morningcheck[4] = {6, ' ', 'A', 'M'};
   pinMode(DOpin, INPUT);
@@ -28,13 +28,13 @@ int main(void) {
     time( &rawtime );
     info = localtime( &rawtime );
 
-    strftime (buffer, 4, "%I %p", info);
-    if((strftime (buffer == nightcheck) {
+    strftime (buffer, 10, "%I %p", info);
+    if(((buffer == nightcheck) {
       digitalWrite(RelayPin1, LOW);
       while(buffer != morningcheck) {
         time( &rawtime );
         info = localtime( &rawtime );
-        strftime (buffer, 4, "%I %p", info);
+        strftime (buffer, 10, "%I %p", info);
       }
     }
 
