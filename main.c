@@ -17,7 +17,7 @@ int main(void) {
   time_t rawtime;
   struct tm *info;
   char buffer[10];
-  char nightcheck[4] = {6, ' ', 'P', 'M'};
+  char nightcheck[4] = {8, ' ', 'P', 'M'};
   char morningcheck[4] = {6, ' ', 'A', 'M'};
   pinMode(DOpin, INPUT);
   pinMode(TouchPin, INPUT);
