@@ -23,12 +23,11 @@ Create a painting with hidden paint integrated into it that can only become visi
 [Photoresistor](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-20-photoresistor-module-sensor-kit-v2-0-for-b-plus.html) <br />
 
 ### Photoresistor ###
-GPIO 22 - DOpin
+GPIO 19 - DOpin
 ### Relay ###
-GPIO 17 - RelayPin1 <br />
-GPIO 27 - RelayPin2
+GPIO 17 - RelayPin1
 ### Touch Switch ###
-GPIO 18 - TouchPin
+GPIO 26 - TouchPin
 
 ## Responsibilities ##
 Responsible for Programming - Joses Paras <br />

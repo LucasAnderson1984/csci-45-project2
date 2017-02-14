@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <errno.h>
 #include <wiringPi.h>
-#define DOpin 22
+
+#include <time.h>
+#define DOpin 19
 #define RelayPin1 17
-#define RelayPin2 27
-#define TouchPin 18
+#define TouchPin 26
 
 int main(void) {
 
@@ -15,14 +16,31 @@ int main(void) {
 
   int temp = 0;
 
+  time_t rawtime;
+  struct tm *info;
+  char buffer[10];
+  char nightcheck[4] = {8, ' ', 'P', 'M'};
+  char morningcheck[4] = {6, ' ', 'A', 'M'};
+  
   pinMode(DOpin, INPUT);
   pinMode(TouchPin, INPUT);
   pinMode(RelayPin1, OUTPUT);
-  pinMode(RelayPin2, OUTPUT);
   digitalWrite(RelayPin1, LOW);
-  digitalWrite(RelayPin2, HIGH);
 
   while(1) {
+    time( &rawtime );
+    info = localtime( &rawtime );
+
+    strftime (buffer, 10, "%I %p", info);
+    if(buffer == nightcheck) {
+      digitalWrite(RelayPin1, LOW);
+      while(buffer != morningcheck) {
+        time( &rawtime );
+        info = localtime( &rawtime );
+        strftime (buffer, 10, "%I %p", info);
+      }
+    }
+
     if(digitalRead(DOpin)) {
       digitalWrite(RelayPin1, HIGH);
       delay (10000);
